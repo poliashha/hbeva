@@ -5,7 +5,7 @@ function startCountdown(targetDate) {
 
         if (distance < 0) {
             document.getElementById("timer").style.display = "none";
-            document.getElementById("datetime").textContent = "Мы стали семьей!";
+            document.getElementById("datetime").textContent = "Мне уже 16!";
             return;
         }
 
