@@ -1,0 +1,492 @@
+body {
+    background-color: var(--background-color);
+}
+
+.header {
+    max-width: 412px;
+    margin: auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.convert {
+    margin-top: 110px;
+}
+
+.bottom {
+    z-index: -4;
+    position: absolute;
+    top: 110px;
+    left: 27px;
+}
+
+.flower {
+    position: absolute;
+    top: 0;
+    left: 27px;
+    z-index: -2;
+}
+
+.write {
+    position: absolute;
+    top: 41px;
+    right: 48px;
+    z-index: -2;
+}
+
+.flowers {
+    position: absolute;
+    top: 57px;
+    right: 16px;
+    z-index: 1;
+}
+
+.heart {
+    position: absolute;
+    top: 100px;
+    /* Начальная позиция снизу (вне экрана) */
+    right: 111px;
+    z-index: -1;
+    animation: riseUp 1.5s ease-out forwards;
+}
+
+@keyframes riseUp {
+    0% {
+        top: 125px;
+
+        opacity: 0;
+
+    }
+
+    100% {
+        top: 113px;
+
+        opacity: 1;
+
+    }
+}
+
+.main {
+    max-width: 412px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 90px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 90px;
+}
+
+.location {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 27px;
+}
+
+.title {
+    font-family: var(--main-fontr);
+    font-size: 20px;
+    color: var(--color-text);
+    text-align: center;
+}
+
+.kursiv {
+    font-family: var(--kursiv-text);
+    font-size: 64px;
+    color: var(--kursiv-color);
+    font-weight: 400;
+    text-align: center;
+}
+
+.map-button {
+    border-radius: 15px;
+    width: 220px;
+    height: 37px;
+    background-color: rgba(194, 131, 125, 0.67);
+    border: none;
+    font-size: 14px;
+}
+
+.href {
+    text-decoration: none;
+    color: var(--background-color);
+    font-family: var(--main-fontr);
+    font-size: 16px;
+}
+
+.time {
+    max-width: 412px;
+    width: 100%;
+    color: var(--color-text);
+    position: relative;
+    z-index: 0;
+    margin-top: -48px;
+}
+
+.tetx-timer {
+    color: var(--color-text);
+}
+
+.text-input {
+    font-size: 18px;
+}
+
+.time {
+    max-width: 412px;
+    width: 100%;
+    position: relative;
+    z-index: 0;
+    margin-top: -40px;
+}
+
+.text-input {
+    font-size: 18px;
+}
+
+.timer-text {
+    font-size: 35px;
+    text-align: center;
+    font-family: var(--timer-font);
+    position: relative;
+    width: 37px;
+
+}
+
+.colon {
+    width: 12px;
+}
+
+.timer {
+    padding-top: 24px;
+    display: flex;
+    gap: 13px;
+    justify-content: center;
+    align-items: center;
+}
+
+.timer-text_small {
+    font-size: 15px;
+}
+
+.days::after {
+    content: "дней";
+    position: absolute;
+    top: 40px;
+    right: 3px;
+    font-size: 15px;
+    font-family: var(--main-font);
+    font-weight: 400;
+}
+
+.hours::after {
+    content: "часов";
+    position: absolute;
+    top: 40px;
+    right: -1px;
+    font-size: 15px;
+    font-family: var(--main-font);
+    font-weight: 400;
+}
+
+.minutes::after {
+    content: "минут";
+    position: absolute;
+    top: 40px;
+    right: -6px;
+    font-size: 15px;
+    font-family: var(--main-font);
+    font-weight: 400;
+}
+
+.seconds::after {
+    content: "секунд";
+    position: absolute;
+    top: 40px;
+    left: -5px;
+    font-size: 15px;
+    font-family: var(--main-font);
+    font-weight: 400;
+}
+
+.wishes {
+    padding: 0 50px;
+}
+
+.form-box {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+    height: auto;
+    transition: height 0.3s ease;
+    max-width: 330px;
+    width: 100%;
+    padding-top: 14px;
+    color: var(--color-text);
+}
+
+.radio {
+    display: flex;
+    flex-direction: column;
+    outline: none;
+    border: none;
+    padding: 0;
+    gap: 6px;
+}
+
+.custom-radio input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.radio-circle {
+    display: inline-block;
+    width: 11px;
+    height: 11px;
+    border: 1px solid var(--color-text);
+    border-radius: 50%;
+    background: transparent;
+    transition: all 0.15s;
+    position: relative;
+}
+
+.input {
+    border-top: 1px solid transparent;
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
+    border-bottom: 1px solid var(--color-text);
+    border-radius: 0;
+    max-width: 330px;
+    width: 100%;
+    height: 21px;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    outline: none;
+}
+
+.custom-radio:hover .radio-circle {
+    border-color: var(--color-text);
+}
+
+.custom-radio input[type="radio"]:checked+.radio-circle {
+    border-color: var(--color-text);
+    background: var(--color-text);
+}
+
+.radio-text {
+    text-align: left;
+    font-size: 18px;
+    font-family: var(--main-font);
+
+    font-weight: 400;
+}
+
+
+.button {
+    max-width: 330px;
+    width: 100%;
+    transition: all 0.3s ease;
+    height: 28px;
+    justify-self: center;
+    align-self: center;
+
+    background-color: transparent;
+    border: 1px solid var(--color-text);
+    font-family: var(--main-font);
+    font-size: 14px;
+}
+
+.button.touch-pressed {
+    background-color: rgba(168, 164, 164, 0.329);
+
+}
+
+@media (hover: hover) {
+    .button:hover {
+        background-color: var(--background-color-light);
+        color: var(--hot-pink-color);
+    }
+}
+
+.footer-text {
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: -0.05em;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--hot-pink-color);
+}
+
+.form-send {
+    text-align: center;
+}
+
+.error-text {
+    display: none;
+    font-size: 14px;
+    padding-top: 5px;
+}
+
+.error-text.show {
+    display: block;
+    animation: show 0.3s ease;
+}
+
+.radio-error {
+    display: none;
+    text-align: left;
+    font-size: 14px;
+}
+
+.radio-error.show {
+    display: block;
+    animation: show 0.3s ease;
+}
+
+@keyframes show {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.checkbox {
+    font-size: 20px;
+}
+
+.error-icon {
+    font-size: 16px;
+}
+
+.input_box {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.input::placeholder {
+    color: var(--color-text);
+    font-size: 16px;
+
+}
+
+.size {
+    font-size: 15px;
+}
+
+.custom-radio {
+    font-size: 18px;
+    text-align: left;
+}
+
+.form-text {
+    font-size: 40px;
+    text-align: center;
+}
+
+.footer {
+
+    position: relative;
+    max-width: 412px;
+    margin: auto;
+    margin-top: 67px;
+}
+
+.text-bottom {
+    font-size: 48px;
+    position: absolute;
+    top: -9px;
+    left: 116px;
+    margin-bottom: -10px;
+    height: 22px;
+}
+
+.footer-img {
+    max-width: 412;
+    width: 100%;
+    aspect-ratio: 412/37;
+}
+
+body.no-scroll {
+    overflow: hidden;
+    height: 100vh;
+}
+
+.prewu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+   
+
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: opacity 1s ease, visibility 1s ease;
+}
+
+.title-prewu{
+    color: var(--background-color);
+    position: absolute; 
+    top: 25px;
+    left: 131px;
+    font-size: 36px;
+     transform: translateY(-10px);
+    animation: slideInText 1.2s ease-out forwards;
+    animation-delay: 0.3s;
+     opacity: 0;
+    
+}
+
+.text-prewu {
+    font-size: 16px;
+    color: var(--background-color);
+     position: absolute; 
+    top: 280px;
+    left: 113px;
+    opacity: 0;
+   
+    animation: slideInText 1.2s ease-out forwards;
+    animation-delay: 0.6s;
+}
+
+@keyframes slideInText {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.convert-prewu {
+   
+    pointer-events: none;
+    filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.2));
+    z-index: -1;
+}
+
+.prewu.hide {
+    opacity: 0;
+    visibility: hidden;
+}
+
+#mainContent {
+    display: none;
+}
